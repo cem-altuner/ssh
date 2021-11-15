@@ -6,6 +6,13 @@ SSH uses encryption technique to ensure that all communications to & from the re
 
 As you know, we often use the git version control system when submitting projects to Github. It asks us for username and password every time we commit. After these steps, you will now be able to push without the need for a username and password.
 
+If you don't have any SSH keys or want to check if they exist
+- [Checking for existing SSH keys](./check-ssh.md)
+
+If you want to create new SSH keys 
+- [Generating a new SSH key](./check-ssh.md)
+
+
 
 # <b>Adding a new SSH key to your GitHub account</b>
 

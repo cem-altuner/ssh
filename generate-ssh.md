@@ -7,10 +7,10 @@ If you don't already have an SSH key, you must generate a new SSH key.
 
 1. In order to generate ssh-key, run the code below by adding your e-mail address you use on github.
    
-         >`$ ssh-keygen -t ed25519-sk -C "your_email@example.com" `
+         $ ssh-keygen -t ed25519-sk -C "your_email@example.com"
       - If your system does not support the Ed25519 algorithm, use:
   
-            `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com" 
+            $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
   
    This creates a new SSH key, using the provided email as a label.
 
