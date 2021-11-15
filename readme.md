@@ -16,7 +16,7 @@ If you want to add new SSH key to you Github account
 - [Add a new SSH key to Github](./add-ssh-key-to-GIthub.md)
 
 
-# <b>Generate and Add SSH key Script</b>
+# <b>Generate and add SSH key with script</b>
 
 If you want to generate a new SSH key with rsi algorithm, you could use `generate-and-add-rsi.sh` .
 
