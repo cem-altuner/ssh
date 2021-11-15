@@ -1,11 +1,8 @@
 #!/bin/bash
-echo "Enter Your e-mail:"
-read email
-echo ""
 
 
 #Create SSH key with ed25519 algorithm
-ssh-keygen -t ed25519 -C "$email" -f ~/.ssh/id_ed25519 -q -N ""
+ssh-keygen -t ed25519 -C "$1" -f ~/.ssh/id_ed25519 -q -N ""
 eval "$(ssh-agent -s)" 
 
 #Add SSH key to SSH agent
