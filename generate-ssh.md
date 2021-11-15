@@ -72,31 +72,3 @@ After you coplete to generate SSH key or have already one.
 3. Add the ssh key to ssh agent by entering the code below with yuor key name that you have or created.
    
          $ ssh-add ~/.ssh/id_ed25519 
-
-
-
-
-## **Generating a new SSH key for a hardware security key**
-
-If you want to use a hardware security key to authenticate to GitHub, you must generate a new SSH key for your hardware security key. You must connect your hardware security key to your computer when you authenticate with the key pair.
-
-&nbsp;
-
-If you are using macOS or Linux, you may need to update your SSH client or install a new SSH client prior to generating a new SSH key.
-
-1. Insert your hardware security key into your computer.
-   
-2. Open Terminal.
-   
-3. Paste the text below, substituting in the email address for your account on GitHub.
-   
-         $ ssh-keygen -t ed25519-sk -C "your_email@example.com" 
-
-
-4. Add the SSH key to your account on GitHub. For more information, see "Adding a new SSH key to your GitHub account."
-5. When you are prompted to "Enter a file in which to save the key," press Enter to accept the default file location.
-6. When you are prompted to type a passphrase, press Enter.
-   
-         > - Enter passphrase (empty for no passphrase): [_Type a passphrase_]
-         > - Enter same passphrase again: [_Type passphrase again_]
-   
