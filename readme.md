@@ -10,7 +10,7 @@ If you don't have any SSH keys or want to check if they exist
 - [Checking for existing SSH keys](./check-ssh.md)
 
 If you want to create new SSH keys 
-- [Generating a new SSH key](./check-ssh.md)
+- [Generating a new SSH key](./generate-ssh.md)
 
 
 
