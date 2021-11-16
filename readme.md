@@ -12,6 +12,7 @@ Following commands generates ssh key without passphrase and saves your ssh key t
 - Enter **"your-email-address@kloia.com"** field with your e-mail address and copy paste following commands to terminal .
 - 
         ssh-keygen -t ed25519 -C "<your-email-address@kloia.com>" -f ~/.ssh/id_ed25519 -q -N ""
+-
         eval "$(ssh-agent -s)" 
         ssh-add ~/.ssh/id_ed25519
 
