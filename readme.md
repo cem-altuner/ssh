@@ -1,20 +1,41 @@
+# <b>About SSH</b>
+
+SSH, or Secure Shell, is a remote management protocol that allows users to control and organize their servers over the internet. SSH was created as a secure replacement for unencrypted Telnet.
+
+SSH uses encryption technique to ensure that all communications to & from the remote server are encrypted. It provides a mechanism to authenticate a remote user, transfer inputs from the client to the host, and send the output back to the client.
+
+As you know, we often use the git version control system when submitting projects to Github. It asks us for username and password every time we commit. After these steps, you will now be able to push without the need for a username and password.
+
+If you don't have any SSH keys or want to check if they exist
+- [Checking for existing SSH keys](./check-ssh.md)
+
+If you want to create new SSH keys 
+- [Generating a new SSH key](./generate-ssh.md)
+
+or you could use **generate-and-add-ed25519.sh** and **generate-and-add-rsi.sh** scripts which creates ssh key and adds to the ssh agent.  
+
+
+
 # <b>Generate key and add to Github</b>
 
-Following commands generates ssh key without passphrase and saves your ssh key to default ssh file  path  `~/.ssh/` . If you want to use passphrase or save ssh file to another path, follow the [Generating a new SSH key](./generate-ssh.md) instructions.
+Both of the script files generates ssh key and adds your ssh key to ssh-agent. After that it's not necessary to enter your passphrase every time you use your SSH key
 
+Both of the script files generates ssh key without passphrase and saves your ssh key to default ssh file  path  `~/.ssh/` . If you want to use passphrase or save ssh file to another path, follow the [Generating a new SSH key](./generate-ssh.md) instructions.
 
+- If you want to generate a new SSH key with rsi algorithm, you could use `generate-and-add-rsi.sh` .
+
+- If you want to generate a new SSH key with rsi algorithm, you could use `generate-and-add-ed25519.sh` .
+
+- Both of the script files has same instructions.
 
 
 ## **Step 1**
 
 - Open Terminal.
 
-- Enter **"your-email-address@kloia.com"** field with your e-mail address and copy paste following commands to terminal .
-- 
-        ssh-keygen -t ed25519 -C "<your-email-address@kloia.com>" -f ~/.ssh/id_ed25519 -q -N ""
--
-        eval "$(ssh-agent -s)" 
-        ssh-add ~/.ssh/id_ed25519
+- Enter following command in your repository which you downloaded **script** with your **e-mail** address..
+
+        $ sh generate-and-add-ed25519.sh cem.altuner@kloia.com
 
 - Script will save the file with supported format by gihub to  default ssh file  path  `~/.ssh/` . 
 - If you have same file name with **"id_ed25519"** or **"id_rsi"** in your default ssh file path, terminal asks you for **Overwrite (y/n)**. Be careful and don't overwrite your own ssh file which you don't want to delete.
@@ -25,10 +46,9 @@ Following commands generates ssh key without passphrase and saves your ssh key t
 
 ## **Step 2**
 
-- Read SSH key which you generated and copy to clipboard.
+- Copy following key to clipboard 
 
--        cat ~/.ssh/id_ed25519.pub
--        >ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINBVXj6ifMSXzfb9Bkfb/o4oXzGYZf+2vOPok7MDCWa5 cem.altuner@kloia.com    
+    <img src="./Assets/ssh_generate/result.png" width="756">
 
 
 
@@ -57,7 +77,7 @@ Add a label to **"Title"** field. Paste your key into the **"Key"** field and pr
 <img src="./Assets/Github/add_ssh_key.png" width="800">
 
 
-You could check you connection with `ssh -T git@github.com`
+You could check you connection wit `ssh -T git@github.com`
 
         $ ssh -T git@github.com
         >Please type 'yes', 'no' or the fingerprint: yes
