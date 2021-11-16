@@ -77,7 +77,7 @@ Add a label to **"Title"** field. Paste your key into the **"Key"** field and pr
 <img src="./Assets/Github/add_ssh_key.png" width="800">
 
 
-You could check you connection wit `ssh -T git@github.com`
+You could check you connection with `ssh -T git@github.com`
 
         $ ssh -T git@github.com
         >Please type 'yes', 'no' or the fingerprint: yes
