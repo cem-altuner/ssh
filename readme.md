@@ -12,7 +12,7 @@ If you don't have any SSH keys or want to check if they exist
 If you want to create new SSH keys 
 - [Generating a new SSH key](./generate-ssh.md)
 
-or you could use **generate-and-add-ed25519.sh** and **generate-and-add-rsi.sh** scripts which is creating ssh key and adds to the ssh agent.  
+or you could use **generate-and-add-ed25519.sh** and **generate-and-add-rsi.sh** scripts which creates ssh key and adds to the ssh agent.  
 
 
 

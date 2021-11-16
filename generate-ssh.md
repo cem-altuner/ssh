@@ -1,9 +1,7 @@
-## **Generating a new SSH key**
+## **Generating a new SSH key and adding to ssh-agent**
 &nbsp;
  
-
-If you don't already have an SSH key, you must generate a new SSH key.
-
+If you don't have any SSH key, you must generate a new SSH key to use for authentication. If you want to check your existing SSH keys follow instructions at [Checking for existing SSH keys](./check-ssh.md)
 
 1. In order to generate ssh-key, run the code below by adding your e-mail address you use on github.
    
